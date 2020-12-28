@@ -7,17 +7,17 @@ BugSplat-Deno is a TypeScript error reporting system for [Deno](https://deno.lan
 
 ## Configuration
 To add the bugsplat package to your application, run the following shell command at the root of your project’s directory:
-```shell
+```ts
 import { BugSplat } from 'https://bugsplat-public.s3.amazonaws.com/deno/dist/bugsplat.ts';
 ```
 
 Create a new instance of the BugSplat class with the name of your BugSplat database, the name of your application and the version of your application:
-```js
+```ts
 const bugsplat = new BugSplat("DatabaseName", "AppName", "1.0.0.0");
 ```
 
 Use bugsplat-deno to capture errors that originate inside of try-catch blocks:
-```js
+```ts
 try {
     throw new Error("BugSplat");
 } catch (error) {
@@ -26,7 +26,7 @@ try {
 ```
 
 You can also use bugsplat-deno to post errors from non-fatal promise rejections:
-```js
+```ts
 Promise.reject(new Error("BugSplat!")).catch(error => bugsplat.post(error, {}));
 ```
 
