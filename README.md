@@ -8,7 +8,7 @@ BugSplat-Deno is a TypeScript error reporting system for [Deno](https://deno.lan
 ## Configuration
 To add the bugsplat package to your application, run the following shell command at the root of your project’s directory:
 ```ts
-import { BugSplat } from 'https://bugsplat-public.s3.amazonaws.com/deno/dist/bugsplat.ts';
+import { BugSplat } from 'https://deno.land/x/bugsplat@v1.0.0/bugsplat.ts';
 ```
 
 Create a new instance of the BugSplat class with the name of your BugSplat database, the name of your application and the version of your application:
